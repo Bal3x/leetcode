@@ -37,18 +37,17 @@ using namespace std;
 int main(){
 // variables
     const int as = 4;
-    int nums[as] = {2, 7, 11, 15}, i, target = 9;
+    int nums[as] = {2, 7, 11, 15}, target = 9;
+    int i, sum, n;
 
-// buscar dos valores en el arreglo que sumados produzcan target
+// codigo que busque dos valores en el arreglo que sumados produzcan target
     for (i = 0; i < as - 1; i++){
-        int sum;
-        sum = nums[0] + nums[i+1];  //need to fix maybe by fixing value and then verifying for each ar[]
-        if (sum == target){
-            cout << "The sum of nums[" << i << "] = " << nums[i] << " + nums[" << i+1 << "] = " << nums[i+1] <<
-            " is equal to target " << target << endl;
+        for (n = i + 1; n < as; n++){
+            if (nums[i] + nums[n] == target)
+            cout << "The sum of nums[" << i << "] = " << nums[i] << " + nums[" << n << "] = " << nums[n] <<
+                " is equal to target " << target << endl;
         }
-               
-    }
+    } 
         return 0;
 
 }
